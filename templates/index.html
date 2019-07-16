@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block body_block %}
+<style>
+    #myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+/* Add some content at the bottom of the video/page */
+#content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 80%;
+  padding: 20px;
+}
+</style>
+<video autoplay muted loop id="myVideo">
+        <source src="{% static 'images/treadmill.mp4' %}" type="video/mp4">
+      </video>
+    <div class="jumbotron" id="content">
+        <h1 class="display-3">Welcome to GetFit</h1>
+        <p class="lead">About Us</p>
+        <hr class="my-2">
+        <p><strong>Got doubts on whats the right fitness training for you!</strong>
+        You have come to the right place!</p>
+        <p>GetFit is a community of Fitness Trainers, Doctors, and Nutritionists who have been working in this field since long and have gained
+            a huge experience of the same. On <i>getfit.com</i> People get answers to the problems they face while practicing Daily Fitness, Yoga, and Diet Plans.
+            Whether I am practicing the right Yoga Training? What is the difference in Cardio and Strength Training? Are there any side effects? <br>
+            We have got all these covered.
+        </p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="{% url 'register' %}" role="button">Sign Up</a>
+        </p>
+    </div>
+    
+{% endblock %}

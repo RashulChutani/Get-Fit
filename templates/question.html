@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block body_block %}
+
+<div class="jumbotron">
+    <h1>Ask Your Question!</h1>
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{ form|crispy}}
+        <input type="submit" name="login" value="Submit" />
+    </form>
+</div>
+
+{% endblock %}
