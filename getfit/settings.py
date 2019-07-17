@@ -25,7 +25,7 @@ SECRET_KEY = '8f16pxow__u1lkr)##v^^af^3zhr4fig2gpiw8$^pe(c-nawd!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['getfit.pythonanywhere.com']
 
 AUTH_USER_MODEL = 'core.user'
 
